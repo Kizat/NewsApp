@@ -9,7 +9,7 @@ class FavoritesPage extends StatelessWidget {
     // final favoriteController = Get.find<FavoriteController>();
     return Scaffold(
       appBar: AppBar(
-        title: Text("Favorites"),
+        title: Text("Избранное"),
       ),
       body: GetBuilder<FavoriteController>(
         builder: (favoriteController) {

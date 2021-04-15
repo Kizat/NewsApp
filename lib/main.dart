@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-// import 'package:get_storage/get_storage.dart';
 import 'package:news_app/bindings/home_binding.dart';
-import 'package:news_app/pages/home_page.dart';
+import 'package:news_app/pages/news_page.dart';
 
 void main() async {
   // await GetStorage.init();
@@ -14,28 +13,29 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        debugShowCheckedModeBanner: false,
-        enableLog: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          appBarTheme: AppBarTheme(
-            centerTitle: true,
-          ),
-          brightness: Brightness.light,
-          primarySwatch: Colors.amber,
-          primaryColor: Colors.white,
-          accentColor: Colors.amber,
+      debugShowCheckedModeBanner: false,
+      enableLog: false,
+      title: 'Лента новостей',
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          centerTitle: false,
         ),
-        darkTheme: ThemeData(
-          appBarTheme: AppBarTheme(
-            centerTitle: true,
-          ),
-          brightness: Brightness.dark,
-          primarySwatch: Colors.amber,
-          primaryColor: Colors.black,
-          accentColor: Colors.amber,
+        brightness: Brightness.light,
+        primarySwatch: Colors.amber,
+        primaryColor: Colors.white,
+        accentColor: Colors.amber,
+      ),
+      darkTheme: ThemeData(
+        appBarTheme: AppBarTheme(
+          centerTitle: false,
         ),
-        initialBinding: HomeBinding(),
-        home: HomePage());
+        brightness: Brightness.dark,
+        primarySwatch: Colors.amber,
+        primaryColor: Colors.black,
+        accentColor: Colors.amber,
+      ),
+      initialBinding: NewsBinding(),
+      home: TopHeadlinesPage(),
+    );
   }
 }

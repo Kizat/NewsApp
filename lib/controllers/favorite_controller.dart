@@ -26,10 +26,10 @@ class FavoriteController extends GetxController {
     box.setString("favorites", newsModelToJson(favorites.value));
     // update();
     Get.snackbar(
-      "News was added to favorites",
+      "Новость добавлен в избранное",
       "",
       icon: Icon(
-        Icons.star,
+        Icons.bookmark,
         color: Get.theme.accentColor,
       ),
       snackPosition: SnackPosition.BOTTOM,
@@ -46,10 +46,10 @@ class FavoriteController extends GetxController {
         news.publishedAt.microsecondsSinceEpoch);
     box.setString("favorites", newsModelToJson(favorites.value));
     Get.snackbar(
-      "News was removed from favorites",
+      "Новость удален из избранного",
       "",
       icon: Icon(
-        Icons.star_outline,
+        Icons.bookmark_outline,
       ),
       snackPosition: SnackPosition.BOTTOM,
       duration: Duration(
